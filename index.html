@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>NASA Space Missions</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Information about NASA space missions">
+	<meta name="keywords" content="NASA">
+	<meta name="author" content="Adam Crawley">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="scripts/script.js"></script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#table-of-contents" data-bs-offset="0" tabindex="0">
+    <svg id="fader"></svg>
+    <script>
+        loadLightMode();
+    </script>
+
+    <button onclick="topFunction()" id="jump-to-top-button" title="Go to top">
+        <img src="media/up-arrow.svg" alt="Up arrow">
+    </button>
+
+    <div>
+        <header class="header-content">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg justify-content-center pb-lg-0">
+                    <div class="justify-content-center">
+                        <div style="display:flex; justify-content:center;" class="navbar-header navbar-dark">
+                            <h1>NASA Space Missions</h1>
+                            <button class="navbar-toggler ms-4" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                        href="index.html">About NASA</a></li>
+                                <li class="nav-item"><a class="nav-link" href="apollo11.html">Apollo 11</a></li>
+                                <li class="nav-item"><a class="nav-link" href="discovery.html">Discovery</a></li>
+                                <li class="nav-item"><a class="nav-link" href="perseverance.html">Perseverance</a></li>
+                                <li class="nav-item"><a class="nav-link" href="voyager2.html">Voyager 2</a></li>
+                                <li class="nav-item"><a class="nav-link" href="iss.html">The ISS</a></li>
+                                <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                                <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input id="colour-selector" class="form-check-input" type="checkbox" role="switch"
+                            onclick="colourSelector()">
+                        <label class="form-check-label" for="colour-selector">Darkmode</label>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="content container pb-sm-0">
+                <figure class="content-header-figure">
+                    <div class="content-header-image-wrap">
+                        <div class="content-header-image">
+                            <img class="round-img" src="media/mainimage.webp"
+                                alt="Small circular image of two galaxies whose gravitational fields are interacting on eachother. (Source: NASA)" />
+                        </div>
+                    </div>
+                    <br />
+                    <figcaption>
+                        Arp 282 - two galaxies with their gravitational fields
+                        interacting.<br><cite>Source: <abbr>NASA</abbr></cite>.
+                    </figcaption>
+                </figure>
+
+                <h1>Welcome!</h1>
+                <div class="row">
+                    <div class="col-md-2 pe-0 links">
+                        <!--Keeps contents sticky-->
+                        <strong>Contents</strong>
+                        <div id="table-of-contents" class="list-group"></div>
+                    </div>
+
+                    <div class="col-md-10 col-lg-8">
+                        <section class="container">
+                            <h2 hidden>Welcome!</h2>
+                            <p>
+                                This website's aim is to educate young people about previous NASA
+                                Space missions that have influenced and changed space travel for
+                                the better! We also outline some potential future space missions
+                                that may change the way we see Space exploration, and may open
+                                doors to Space travel.
+                            </p>
+                        </section>
+
+                        <section class="container">
+                            <h2>What is <abbr>NASA</abbr>?</h2>
+                            <p>
+                                The <strong>National Aeronautics and Space Administration</strong>
+                                is the space program in America which is funded by the US. It was
+                                founded on <time datetime="1958-07-29">July 29<sup>th</sup> 1958</time> in the midst of
+                                the Cold War
+                                after the USSR had placed multiple man made objects into Earth
+                                orbit - including a dog!
+                            </p>
+                        </section>
+
+                        <section class="container">
+                            <h2>What does <abbr>NASA</abbr> do?</h2>
+                            <p>
+                                In the past, <abbr>NASA</abbr> have completed many trips to the Moon, and have
+                                sent spacecraft to other planets in the Solar System to learn
+                                more about them. One example is Voyager 2, which is the only
+                                spacecraft to have visited Saturn and the only spacecraft to have
+                                visited Neptune.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

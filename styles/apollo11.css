@@ -1,0 +1,20 @@
+/* Apollo 11 astronaut list */
+.card-body, .card {
+    background-color: #0096E0;
+    border-color: #0197E1;
+    border-width: 5px;
+}
+
+.card .btn-primary {
+    border: none;
+    background-color: #1B1B1E;
+}
+.card .btn-primary:hover {
+    background-color: #495057;
+}
+
+/* ----- Modal formatting ----- */
+.modal h5.modal-title, .modal .modal-body p {
+    color: #1B1B1E;
+    text-shadow: none;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>NASA Space Missions</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Information about NASA space missions">
+    <meta name="keywords" content="NASA">
+    <meta name="author" content="Adam Crawley">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="styles/faqs.css" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/faqs.js"></script>
+</head>
+
+<body tabindex="0">
+    <svg id="fader"></svg>
+    <script>
+        loadLightMode();
+    </script>
+
+    <button onclick="topFunction()" id="jump-to-top-button" title="Go to top">
+        <img src="media/up-arrow.svg" alt="Up arrow">
+    </button>
+
+    <div>
+        <header class="header-content">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg justify-content-center pb-lg-0">
+                    <div class="justify-content-center">
+                        <div style="display:flex; justify-content:center;" class="navbar-header navbar-dark">
+                            <h1>NASA Space Missions</h1>
+                            <button class="navbar-toggler ms-4" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item"><a class="nav-link" href="index.html">About NASA</a></li>
+                                <li class="nav-item"><a class="nav-link" href="apollo11.html">Apollo 11</a></li>
+                                <li class="nav-item"><a class="nav-link" href="discovery.html">Discovery</a></li>
+                                <li class="nav-item"><a class="nav-link" href="perseverance.html">Perseverance</a></li>
+                                <li class="nav-item"><a class="nav-link" href="voyager2.html">Voyager 2</a></li>
+                                <li class="nav-item"><a class="nav-link" href="iss.html">The ISS</a></li>
+                                <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                                <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                        href="faqs.html">FAQs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input id="colour-selector" class="form-check-input" type="checkbox" role="switch"
+                            onclick="colourSelector()" checked>
+                        <label class="form-check-label" for="colour-selector">Darkmode</label>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="content container pb-sm-0">
+                <figure class="content-header-figure">
+                    <div class="content-header-image-wrap">
+                        <div class="content-header-image">
+                            <img class="round-img" src="media/mainimage.webp"
+                                alt="Small circular image of two galaxies whose gravitational fields are interacting on eachother. (Source: NASA)" />
+                        </div>
+                    </div>
+                    <br />
+                    <figcaption>
+                        Arp 282 - two galaxies with their gravitational fields
+                        interacting.<br><cite>Source: <abbr>NASA</abbr></cite>.
+                    </figcaption>
+                </figure>
+
+                <h1>Frequently Asked Questions</h1>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                        <section class="container">
+                            <h2 hidden>Search FAQs</h2>
+                            <form autocomplete="off" oninput="onInput()">
+                                <div class="input-group form-floating mb-3">
+                                    <input type="text" class="form-control" id="faqInput" placeholder="text" aria-label="Frequently asked question search" aria-describedby="faqDiscardButton">
+                                    <label for="faqInput">Search FAQs</label>
+                                    <button class="btn btn-danger" type="button" id="faqDiscardButton" onclick="removeFaqInput()">X</button>
+                                </div>
+                                <div class="invalid-feedback text-center">
+                                    Sorry, but there are no FAQs found.
+                                </div>
+                            </form>
+
+                            <div class="accordion" id="accordion"></div>
+                        </section>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+
+                <p id="faqData" hidden>
+                    When was NASA founded?|July 29th 1958||
+                    When was Apollo 11 launched?|July 16th 1969||
+                    When did Apollo 11 land on the Moon?|July 21st 1969||
+                    Who were the Apollo 11 crew?|Neil A. Amrstrong, Micheal Collins, and Edwin "Buzz" E.Aldrin Jr||
+                    How long did the Apollo 11 mission last?|8 days and 3 hours||
+                    How long were the Apollo 11 crew in quarantine?|21 days||
+                    What was the Cold War?|A period of heightened tensions between the USA and the USSR (now Russia)||
+                    Where did Apollo 11 launch from?|Cape Kennedy (now known as Cape Canaveral), Florida, USA||
+                    What was Discovery?|A space shuttle that was part of NASA's Space Shuttle program, designed to allow humans to enter low Earth orbit cost effectively||
+                    How many missions did Discovery have?|39 missions, over a span of 27 years||
+                    How long did Discovery spend in orbit?|365 days in total||
+                    How many miles did Discovery travel?|Almost 150 million miles||
+                    Why did the Shuttle program end?|It was actually deemed more expensive than traditional rockets||
+                    What is Perseverance?|The most recent Mars rover from NASA||
+                    When did Perseverance land on Mars?|February 18th 2021, after 7 months in transit||
+                    What is Ingenuity?|A small robotic helicopter taken to Mars as part of the Perseverance rover||
+                    What is the Voyager/Grand Tour Program?|Two space probes launched in 1977 to study the outer planets of the solar system||
+                    How long has Voyager 2 been in Space?|As of April 2022, it has spent 44 years in Space!
+                    How many lines of code does the ISS use?|On the US segment, it has 1||5 million lines of code||
+                    When is the ISS going to be decommisioned?|It is set to end in 2031
+                </p>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

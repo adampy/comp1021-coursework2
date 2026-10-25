@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Voyager 2</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Information about NASA space missions">
+	<meta name="keywords" content="NASA">
+	<meta name="author" content="Adam Crawley">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/voyager2.js"></script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#table-of-contents" data-bs-offset="0" tabindex="0">
+    <svg id="fader"></svg>
+    <script>
+        loadLightMode();
+    </script>
+
+    <button onclick="topFunction()" id="jump-to-top-button" title="Go to top">
+        <img src="media/up-arrow.svg" alt="Up arrow">
+    </button>
+
+    <div>
+        <header class="header-content">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg justify-content-center pb-lg-0">
+                    <div class="justify-content-center">
+                        <div style="display:flex; justify-content:center;" class="navbar-header navbar-dark">
+                            <h1>NASA Space Missions</h1>
+                            <button class="navbar-toggler ms-4" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item"><a class="nav-link" href="index.html">About NASA</a></li>
+                                <li class="nav-item"><a class="nav-link" href="apollo11.html">Apollo 11</a></li>
+                                <li class="nav-item"><a class="nav-link" href="discovery.html">Discovery</a></li>
+                                <li class="nav-item"><a class="nav-link" href="perseverance.html">Perseverance</a></li>
+                                <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                        href="voyager2.html">Voyager 2</a></li>
+                                <li class="nav-item"><a class="nav-link" href="iss.html">The ISS</a></li>
+                                <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                                <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input id="colour-selector" class="form-check-input" type="checkbox" role="switch"
+                            onclick="colourSelector()" checked>
+                        <label class="form-check-label" for="colour-selector">Darkmode</label>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="content container pb-sm-0">
+                <figure class="content-header-figure">
+                    <div class="content-header-image-wrap">
+                        <div class="content-header-image">
+                            <img class="round-img" src="media/voyager2.jpg"
+                                alt="Small circular image of the Voyager space probe. (Source: NASA)." />
+                        </div>
+                    </div>
+                    <br />
+                    <figcaption>
+                        Voyager 2 - the first Space probe to flyby Uranus and Neptune.<br><cite>Source: NASA</cite>.
+                    </figcaption>
+                </figure>
+
+                <h1>Voyager 2</h1>
+                <p class="text-center">Time since launch:<br><strong id="voyager2-met"></strong></p>
+                <div class="row">
+                    <div class="col-md-2 pe-0 links">
+                        <!--Keeps contents sticky-->
+                        <strong>Contents</strong>
+                        <div id="table-of-contents" class="list-group"></div>
+                    </div>
+
+                    <div class="col-md-10 col-lg-8">
+                        <section class="container">
+                            <h2 hidden>Voyager 2</h2>
+                            <p>
+                                Voyager 2 is a space probe that was launced in <time datetime="1977">1977</time>, with a
+                                main
+                                goal of studying the outer planets of the Solar System, and deep
+                                outer Space. The space probe as now been operating for <strong>
+                                    <time datetime="P16060D">44 years</time></strong> but most of the probe's systems
+                                aren't in
+                                operation due to power constraints.
+                            </p>
+                            <p>
+                                The Grand Tour program was a program devised by <abbr>NASA</abbr> in which space
+                                probes visit every planet in the outer Solar System, and this was
+                                replaced by Voyager 1 and Voyager 2 launches.<sup>[<a aria-label="Reference 1"
+                                        href="#References">1</a>]</sup>.
+                                The launch window to visit these planets only occurs <strong>once every <time
+                                        datetime="P63875D">175 years</time>!</strong><sup>[<a aria-label="Reference 4"
+                                        href="#References">4</a>]</sup>
+                                Below is a GIF of Voyager 2's trajectory and how it managed to reach
+                                the outer planets in the Solar System.
+                            </p>
+
+                            <figure class="figure">
+                                <img class="figure-img img-fluid rounded" src="media/voyager2trajectory.gif"
+                                    alt="Animated GIF showing the trajectory of Voyager 2 on its way from Earth to the outer planets. (Source: Phoenix7777)">
+                                <figcaption>
+                                    Animated GIF showing the trajectory of Voyager 2 on its way from Earth to the outer
+                                    planets.<br>
+                                    The planets in order from the center to outermost: Earth, Jupiter, Saturn, Uranus,
+                                    Neptune<br>
+                                    Each planet is orbiting the Sun, and the pink line shows the Voyager 2
+                                    spacecraft<br>
+                                    <cite>(Source: Phoenix7777)</cite><sup>[<a aria-label="Reference 2"
+                                            href="#References">2</a>]</sup>
+                                </figcaption>
+                            </figure>
+                        </section>
+
+                        <section class="container">
+                            <h2>Voyager Statistics</h2>
+                            <p>
+                                Below is a table with some statistics about both Voyager missions.
+                                You can hover over any cell in the table to get some additional
+                                information!<sup>[<a aria-label="Reference 3" href="#References">3</a>]</sup>
+                            </p>
+                            <table class="table table-dark table-hover">
+                                <caption>Statistics about the Voyager spacecraft</caption>
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <th scope="col">Voyager 1</th>
+                                        <th scope="col">Voyager 2</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Launch Time (<abbr
+                                                title="Coordinated Universal Time">UTC</abbr>)</th>
+                                        <td><time datetime="1977-09-05 12:56:00">5<sup>th</sup> September, 1977 at
+                                                12:56:00</time></td>
+                                        <td><time datetime="1977-08-20 14:29:00">20<sup>th</sup> August, 1977 at
+                                                14:29:00</time></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Jupiter encounter</th>
+                                        <td><time datetime="1979-03-05">5<sup>th</sup> March, 1979</time></td>
+                                        <td><time datetime="1979-07-09">9<sup>th</sup> July, 1979</time></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Saturn encounter</th>
+                                        <td><time datetime="1980-11-09">9<sup>th</sup> November, 1980</time></td>
+                                        <td><time datetime="1981-08-25">25<sup>th</sup> August, 1981</time></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Uranus encounter</th>
+                                        <td><span
+                                                title="Voyager 1 was not scheduled for an encounter with Uranus">N/A</span>
+                                        </td>
+                                        <td><time datetime="1986-01-24">24<sup>th</sup> January, 1986</time></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Neptune encounter</th>
+                                        <td><span
+                                                title="Voyager 1 was not scheduled for an encounter with Neptune">N/A</span>
+                                        </td>
+                                        <td><time datetime="1989-08-25">25<sup>th</sup> August, 1989</time></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+
+                        <section class="container">
+                            <h2>Where is Voyager 2 now?</h2>
+                            <p>
+                                Voyager 2, currently, is in interstellar space, and the main
+                                objective of the mission has changed from investigating the outer
+                                Solar System to interstellar space. Some of its instruments have
+                                been disabled in order to conserve energy - they don't have solar
+                                panels because they are so far away from the Sun that they would
+                                never work! <sup>[<a aria-label="Reference 4" href="#References">4</a>]</sup>
+                            </p>
+
+                            <figure class="figure">
+                                <img class="figure-img img-fluid rounded" src="media/dione.jpg"
+                                    alt="A grey moon with numerous craters and canyons visible, photographed by Voyager 2. (Source: NASA/JPL-Caltech)">
+                                <figcaption class="figure-caption">One of Saturn's many moons, called Dione, photographed by Voyager 2.
+                                    <cite>(Source: NASA/JPL-Caltech)</cite></figcaption>
+                            </figure>
+                        </section>
+
+                        <section class="container text-break">
+                            <h3>References</h3>
+                            <div class="references-container">
+                                <ol class="references">
+                                    <li>National Aeronautics and Space Administration, Jet Propulsion Laboratory, and
+                                        California Institute of Technology <i>Planetary Voyage</i>. [Online]. 2022.
+                                        [Accessed 3 March 2022]. Available from: <a
+                                            href="https://voyager.jpl.nasa.gov/mission/science/planetary-voyage/">https://voyager.jpl.nasa.gov/mission/science/planetary-voyage/</a>
+                                    </li>
+                                    <li>Phoenix7777. <i>Animation of Voyager 2 Trajectory</i>. [Animated GIF]. 2020.
+                                        [Accessed 4 March 2022]. Available from: <a
+                                            href="https://commons.wikimedia.org/wiki/File:Animation_of_Voyager_2_trajectory.gif">https://commons.wikimedia.org/wiki/File:Animation_of_Voyager_2_trajectory.gif</a>
+                                    </li>
+                                    <li>National Aeronautics and Space Administration, Jet Propulsion Laboratory, and
+                                        California Institute of Technology <i>Voyager Timeline</i>. [Online]. 2022.
+                                        [Accessed 3 March 2022]. Available from: <a
+                                            href="https://voyager.jpl.nasa.gov/mission/timeline/">https://voyager.jpl.nasa.gov/mission/timeline/</a>
+                                    </li>
+                                    <li>National Aeronautics and Space Administration, Jet Propulsion Laboratory, and
+                                        California Institute of Technology <i>Fact Sheet</i>. [Online]. 2022. [Accessed
+                                        4 March 2022]. Available from: <a
+                                            href="https://voyager.jpl.nasa.gov/frequently-asked-questions/fact-sheet/">https://voyager.jpl.nasa.gov/frequently-asked-questions/fact-sheet/</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

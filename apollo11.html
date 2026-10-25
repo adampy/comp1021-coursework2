@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Apollo 11</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Information about NASA space missions">
+    <meta name="keywords" content="NASA">
+    <meta name="author" content="Adam Crawley">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="styles/apollo11.css" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/apollo11.js"></script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#table-of-contents" data-bs-offset="0" tabindex="0">
+    <svg id="fader"></svg>
+    <script>
+        loadLightMode();
+    </script>
+
+    <button onclick="topFunction()" id="jump-to-top-button" title="Go to top">
+        <img src="media/up-arrow.svg" alt="Up arrow">
+    </button>
+
+    <div>
+        <header class="header-content">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg justify-content-center pb-lg-0">
+                    <div class="justify-content-center">
+                        <div class="navbar-header navbar-dark">
+                            <h1>NASA Space Missions</h1>
+                            <button class="navbar-toggler ms-4" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item"><a class="nav-link" href="index.html">About NASA</a></li>
+                                <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                        href="apollo11.html">Apollo 11</a></li>
+                                <li class="nav-item"><a class="nav-link" href="discovery.html">Discovery</a></li>
+                                <li class="nav-item"><a class="nav-link" href="perseverance.html">Perseverance</a></li>
+                                <li class="nav-item"><a class="nav-link" href="voyager2.html">Voyager 2</a></li>
+                                <li class="nav-item"><a class="nav-link" href="iss.html">The ISS</a></li>
+                                <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                                <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input id="colour-selector" class="form-check-input" type="checkbox" role="switch"
+                            onclick="colourSelector()" checked>
+                        <label class="form-check-label" for="colour-selector">Darkmode</label>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="content container pb-sm-0">
+                <figure class="content-header-figure">
+                    <div class="content-header-image-wrap">
+                        <div class="content-header-image">
+                            <img class="round-img" src="media/apollo11launch.jpg"
+                                alt="Small image of the Apollo 11 launch with the rocket off the ground with all engines firing. (Source: NASA)" />
+                        </div>
+                    </div>
+                    <br />
+                    <figcaption>
+                        Apollo 11 - the first manned Moon landing.<br><cite>Source: NASA</cite>.
+                    </figcaption>
+                </figure>
+
+
+                <h1>Apollo 11</h1>
+                <div class="row">
+                    <div class="col-md-2 pe-0 links">
+                        <!--Keeps contents sticky-->
+                        <strong>Contents</strong>
+                        <div id="table-of-contents" class="list-group"></div>
+                    </div>
+
+                    <div class="col-md-10 col-lg-8">
+                        <section class="container">
+                            <h2 hidden>Apollo 11</h2>
+                            <p>
+                                The first spaceflight that landed humans on the Lunar surface was
+                                Apollo 11. Landing on <time datetime="1969-07-21"><strong>July 21<sup>st</sup>
+                                        1969</strong></time>,
+                                the Saturn V rocket carried three astronauts whose names the world
+                                would never forget:
+                            </p>
+
+                            <div class="row row-cols-1 row-cols-sm-3 g-1 g-sm-3">
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <img src="media/narmstrong.jpg" alt="Avatar" />
+                                        <div class="card-body">
+                                            <h5 class="card-title">Neil A. Armstrong</h5>
+                                            <p class="card-text">Commander</p>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#armstrongModal">
+                                            Learn more!
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <img src="media/mcollins.jpeg" alt="Avatar" />
+                                        <div class="card-body">
+                                            <h5 class="card-title">Micheal Collins</h5>
+                                            <p class="card-text">Command Module Pilot</p>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#collinsModal">
+                                            Learn more!
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <img src="media/ealdrin.jpg" alt="Avatar" />
+                                        <div class="card-body">
+                                            <h5 class="card-title">Edwin "Buzz" E. Aldrin Jr.</h5>
+                                            <p class="card-text">Lunar Module Pilot</p>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#aldrinModal">
+                                            Learn more!
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="container">
+                            <h2>About Apollo 11</h2>
+                            <p>
+                                Apollo 11 was a mission to the Moon that lasted <time datetime="8D3H"><strong>8 days and
+                                        3 hours</strong></time>
+                                in total, and brought back <strong>21.6kg</strong><sup>[<a aria-label="Reference 1"
+                                        href="#References">1</a>]</sup> of Moon samples. At this point
+                                in time, scientists had no idea whether or not there was life on
+                                the Moon, and these samples were the foundations of proving that
+                                there was no life on the Moon. Once the three astronauts returned
+                                to Earth, they were placed in a mobile quarantine for a total of <time
+                                    datetime="P21D">21 days</time>
+                                ! This was to ensure they brought no foreign life forms from
+                                the Moon back to Earth.
+                            </p>
+                            <figure class="figure">
+                                <img class="figure-img img-fluid rounded" src="media/mobilequarantine.jpg"
+                                    alt="The Apollo 11 crew in the mobile quarantine facility, being visited by US President Richard Nixon. (Source: NASA on The Commons)">
+                                <figcaption>The Apollo 11 crew in the mobile quarantine facility, being visited by US
+                                    President Richard Nixon. <cite>(Source: NASA on The Commons)</cite></figcaption>
+                            </figure>
+                        </section>
+
+                        <section class="container">
+                            <h2>Why explore Space?</h2>
+                            <p>
+                                The motivation behind space exploration, including the Apollo
+                                prorgams, was further enhanced by the <strong>Cold War</strong><sup>[<a
+                                        aria-label="Reference 2" href="#References">2</a>]</sup>.
+                                The Cold War was not actually a war, but was a period in recent
+                                history in which there was heightened tensions between the <abbr
+                                    title="United States">US</abbr> (United States)
+                                and the <abbr title="Union of Soviet Socialist Republics">USSR</abbr> (now known as
+                                Russia). There was a space race between
+                                the two superpowers, with each one trying to reach the Lunar
+                                surface before the other. In the end the US won, but it was fair
+                                to say that both sides had used eachother's newly developed
+                                technology to get their - in a sense, it was a joint effort!
+                            </p>
+                        </section>
+
+                        <section class="container">
+                            <h2>Cape Kennedy</h2>
+                            <p>
+                                Apollo 11 launched from Cape Kennedy (now known as Cape Canaveral)
+                                in <time datetime="1969">1969</time>, and many spacecraft since then
+                                have launched from the same location. Cape Kennedy is known for its
+                                spacecraft launches, but do you know how far away it is? Using the
+                                tool below, you can see where Cape Kennedy is located, and your
+                                distance to it.
+                            </p>
+                            <div class="text-center">
+                                <button id="location-button" onclick="showLocation()">Show location!</button>
+                                <p id="location"></p>
+                                <p id="weather"></p>
+                            </div>
+                        </section>
+
+
+
+                        <section class="container text-break">
+                            <h3>References</h3>
+                            <div class="references-container">
+                                <ol class="references">
+                                    <li>Lunar and Planetary Institute. <i>Apollo 11 Lunar Samples.</i> [Online]. 2022.
+                                        [Accessed 1 March 2022]. Available from: <a
+                                            href="https://www.lpi.usra.edu/lunar/missions/apollo/apollo_11/samples/">https://www.lpi.usra.edu/lunar/missions/apollo/apollo_11/samples/</a>
+                                    </li>
+                                    <li>Llewellyn, J. and Thompson, S. <i>The Space Race.</i> [Online]. 2020. [Accessed
+                                        1 March 2022]. Available from: <a
+                                            href="https://alphahistory.com/coldwar/space-race/">https://alphahistory.com/coldwar/space-race/</a>
+                                    </li>
+                                    <li>NASA. 2019. <i>Apollo 11: Neil Armstrong's Reflections on NASA's Mission to Land
+                                            on the Moon.</i> [Online]. [Accessed
+                                        30 April 2022]. Available from: <a
+                                            href="https://www.youtube.com/watch?v=22PBC-YgWYM">https://www.youtube.com/watch?v=22PBC-YgWYM</a>
+                                    </li>
+                                    <li>NASA. 2021. <i>NASA Remembers Apollo Astronaut Michael Collins.</i> [Online].
+                                        [Accessed
+                                        30 April 2022]. Available from: <a
+                                            href="https://www.youtube.com/watch?v=E4mnpHvK8yM">https://www.youtube.com/watch?v=E4mnpHvK8yM</a>
+                                    </li>
+                                    <li>NASA. 2019. <i>Tribute to Apollo 11 Astronaut Buzz Aldrin.</i> [Online].
+                                        [Accessed
+                                        30 April 2022]. Available from: <a
+                                            href="https://www.youtube.com/watch?v=d-ygJpehWLQ">https://www.youtube.com/watch?v=d-ygJpehWLQ</a>
+                                    </li>
+                                    <li>Ye, Q. 2022. <i>7Timer!.</i> [Online].
+                                        [Accessed
+                                        4 May 2022]. Available from: <a
+                                            href="https://www.7timer.info/">https://www.7timer.info/</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="modal fade" id="armstrongModal" tabindex="-1" aria-labelledby="armstrongModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="armstrongModalLabel">Neil A. Armstrong</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <iframe width="1904" height="784" src="https://www.youtube.com/embed/22PBC-YgWYM"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <p>Neil Armstrong's Reflections on NASA's Mission to Land on the Moon <cite>(Source:
+                            NASA<sup>[3]</sup>)</cite></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="collinsModal" tabindex="-1" aria-labelledby="collinsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="collinsModalLabel">Micheal Collins</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <iframe width="1904" height="800" src="https://www.youtube.com/embed/E4mnpHvK8yM"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <p>NASA Remembers Apollo Astronaut Michael Collins <cite>(Source:
+                            NASA<sup>[4]</sup>)</cite></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="aldrinModal" tabindex="-1" aria-labelledby="aldrinModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="aldrinModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <iframe width="1904" height="800" src="https://www.youtube.com/embed/d-ygJpehWLQ"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <p>Tribute to Apollo 11 Astronaut Buzz Aldrin <cite>(Source: NASA<sup>[5]</sup>)</cite>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

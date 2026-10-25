@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ISS</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Information about NASA space missions">
+	<meta name="keywords" content="NASA">
+	<meta name="author" content="Adam Crawley">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="scripts/script.js"></script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#table-of-contents" data-bs-offset="0" tabindex="0">
+    <svg id="fader"></svg>
+    <script>
+        loadLightMode();
+    </script>
+
+    <button onclick="topFunction()" id="jump-to-top-button" title="Go to top">
+        <img src="media/up-arrow.svg" alt="Up arrow">
+    </button>
+
+    <div>
+        <header class="header-content">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg justify-content-center pb-lg-0">
+                    <div class="justify-content-center">
+                        <div style="display:flex; justify-content:center;" class="navbar-header navbar-dark">
+                            <h1>NASA Space Missions</h1>
+                            <button class="navbar-toggler ms-4" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item"><a class="nav-link" href="index.html">About NASA</a></li>
+                                <li class="nav-item"><a class="nav-link" href="apollo11.html">Apollo 11</a></li>
+                                <li class="nav-item"><a class="nav-link" href="discovery.html">Discovery</a></li>
+                                <li class="nav-item"><a class="nav-link" href="perseverance.html">Perseverance</a></li>
+                                <li class="nav-item"><a class="nav-link" href="voyager2.html">Voyager 2</a></li>
+                                <li class="nav-item"><a class="nav-link active" aria-current="page" href="iss.html">The
+                                        ISS</a></li>
+                                <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                                <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input id="colour-selector" class="form-check-input" type="checkbox" role="switch"
+                            onclick="colourSelector()" checked>
+                        <label class="form-check-label" for="colour-selector">Darkmode</label>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="content container">
+                <figure class="content-header-figure">
+                    <div class="content-header-image-wrap">
+                        <div class="content-header-image">
+                            <img class="round-img" src="media/iss.jpg"
+                                alt="Small circular image of the International Space Station, with Earth in the background. (Source: NASA)" />
+                        </div>
+                    </div>
+                    <br />
+                    <figcaption>
+                        ISS - the furthest humans have gone since 1972.<br><cite>Source: NASA</cite>.
+                    </figcaption>
+                </figure>
+
+                <h1>International Space Station</h1>
+                <div class="row">
+                    <div class="col-md-2 pe-0 links">
+                        <!--Keeps contents sticky-->
+                        <strong>Contents</strong>
+                        <div id="table-of-contents" class="list-group"></div>
+                    </div>
+
+                    <div class="col-md-10 col-lg-8">
+                        <section class="container">
+                            <h2 hidden>International Space Station</h2>
+                            <p>
+                                The International Space Station (ISS) is a space station in low
+                                Earth orbit, and is one of two currently operational space stations
+                                in orbit. The construction of the ISS started in <time datetime="1998">1998</time> and
+                                it was
+                                assembled in orbit by 42 assembly flights.<sup>[<a aria-label="Reference 1"
+                                        href="#References">1</a>]</sup>
+                            </p>
+
+                            <p>
+                                The ISS has over <strong>1.5 million lines of code</strong> on the U.S. segment, and
+                                keeps tabs on 400,000 different data points. These data points are
+                                critical to the health of the astronauts living in the station, who
+                                don't see their families for prolonged periods of times.
+                            </p>
+                        </section>
+
+                        <section class="container">
+                            <h2>Orbital Debris</h2>
+                            <p>
+                                Orbital debris (space debris) is a huge problem that most people underestimate. The
+                                ISS has an <strong>orbital velocity of 7.6km/s</strong><sup>[<a aria-label="Reference 1"
+                                        href="#References">1</a>]</sup>
+                                so any collision could be catastrophic.
+                            </p>
+
+                            <figure class="figure">
+                                <img class="figure-img img-fluid rounded" src="media/lexanprojectile.jpg"
+                                    alt="A large impact crater in an aluminium block caused by a 7 gram plastic pellet fired at 7km/s.">
+                                <figcaption>Crater caused by a 7 gram plastic pallet on an aluminium block when fired at
+                                    7km/s.<br>Image taken as part of the Strategic Defense Initiative<cite><sup>[<a
+                                                aria-label="Reference 2" href="#References">2</a>]</sup></cite>
+                                </figcaption>
+                            </figure>
+                        </section>
+
+                        <section class="container">
+                            <h2>How are orbital debris avoided?</h2>
+                            <p>
+                                To avoid debris, the ISS has to increase and decrease its
+                                altitude. It does this once <time datetime="P365D">a year</time> on average<sup>[<a
+                                        aria-label="Reference 3" href="#References">3</a>]</sup>, but as more
+                                and more satellites and spacecraft are launched there will
+                                be more orbital debris present in low-Earth orbit.
+                            </p>
+                        </section>
+
+                        <section class="container">
+                            <h2>Future of the ISS</h2>
+                            <p>
+                                The ISS is becoming more and more expensive to run as it
+                                gets older and requires more maintenance, and the future
+                                of the <strong>ISS is set to end in <time datetime="2031">2031</time></strong>. NASA
+                                plans to deorbit
+                                the station into the Pacific Ocean and will pay commercial
+                                companies in exchange for time on their crafts. NASA scientists
+                                will use the time bought on commerically funded stations
+                                to carry out experiments, as this will be deemed more cost
+                                effective.<sup>[<a aria-label="Reference 4" href="#References">4</a>]</sup>
+                            </p>
+                        </section>
+
+                        <section class="container text-break">
+                            <h3>References</h3>
+                            <div class="references-container">
+                                <ol class="references">
+                                    <li>National Aeronautics and Space Administration. <i>International Space Station
+                                            Facts and Figures.</i> [Online]. 2021. [Accessed 5 March 2022]. Available
+                                        from: <a
+                                            href="https://www.nasa.gov/feature/facts-and-figures">https://www.nasa.gov/feature/facts-and-figures</a>
+                                    </li>
+                                    <li>R. D. Ward [Camera Operator]. <i>SDIO KEW Lexan projectile.</i> [Online]. 1985.
+                                        [Accessed 5 March 2022]. Available from: <a
+                                            href="https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/International_Space_Station/ISS_International_Space_Station">https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/International_Space_Station/ISS_International_Space_Station</a>
+                                    </li>
+                                    <li>National Aeronautics and Space Administration. <i>Frequently Asked Questions:
+                                            Orbital Debris.</i> [Online]. 2011. [Accessed 5 March 2022]. Available from:
+                                        <a
+                                            href="https://www.nasa.gov/news/debris_faq.html">https://www.nasa.gov/news/debris_faq.html/</a>
+                                    </li>
+                                    <li>Sky News. <i>NASA plans to take International Space Station out of orbit in
+                                            January 2031 by crashing it into 'spacecraft cemetery'.</i> [Online]. 2022.
+                                        [Accessed 5 March 2022]. Available from: <a
+                                            href="https://news.sky.com/story/nasa-plans-to-take-international-space-station-out-of-orbit-in-january-2031-by-crashing-it-into-spacecraft-cemetery-12530194">https://news.sky.com/story/nasa-plans-to-take-international-space-station-out-of-orbit-in-january-2031-by-crashing-it-into-spacecraft-cemetery-12530194</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

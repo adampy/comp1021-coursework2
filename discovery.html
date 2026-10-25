@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Discovery</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Information about NASA space missions">
+	<meta name="keywords" content="NASA">
+	<meta name="author" content="Adam Crawley">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="styles/discovery.css" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="scripts/script.js"></script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#table-of-contents" data-bs-offset="0" tabindex="0">
+    <svg id="fader"></svg>
+    <script>
+        loadLightMode();
+    </script>
+
+    <button onclick="topFunction()" id="jump-to-top-button" title="Go to top">
+        <img src="media/up-arrow.svg" alt="Up arrow">
+    </button>
+
+    <div>
+        <header class="header-content">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg justify-content-center pb-lg-0">
+                    <div class="justify-content-center">
+                        <div style="display:flex; justify-content:center;" class="navbar-header navbar-dark">
+                            <h1>NASA Space Missions</h1>
+                            <button class="navbar-toggler ms-4" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item"><a class="nav-link" href="index.html">About NASA</a></li>
+                                <li class="nav-item"><a class="nav-link" href="apollo11.html">Apollo 11</a></li>
+                                <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                        href="discovery.html">Discovery</a></li>
+                                <li class="nav-item"><a class="nav-link" href="perseverance.html">Perseverance</a></li>
+                                <li class="nav-item"><a class="nav-link" href="voyager2.html">Voyager 2</a></li>
+                                <li class="nav-item"><a class="nav-link" href="iss.html">The ISS</a></li>
+                                <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                                <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input id="colour-selector" class="form-check-input" type="checkbox" role="switch"
+                            onclick="colourSelector()" checked>
+                        <label class="form-check-label" for="colour-selector">Darkmode</label>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="content container pb-sm-0">
+                <figure class="content-header-figure">
+                    <div class="content-header-image-wrap">
+                        <div class="content-header-image">
+                            <img class="round-img" src="media/discovery.jpg"
+                                alt="Small circular image of a space shuttle, called Discovery, landing. (Source: NASA)." />
+                        </div>
+                    </div>
+                    <br />
+                    <figcaption>
+                        Discovery - the longest-serving space shuttle in history.<br><cite>Source: NASA</cite>.
+                    </figcaption>
+                </figure>
+                
+                <h1>Discovery</h1>
+                <div class="row">
+                    <div class="col-md-2 pe-0 links">
+                        <!--Keeps contents sticky-->
+                        <strong>Contents</strong>
+                        <div id="table-of-contents" class="list-group"></div>
+                    </div>
+
+                    <div class="col-md-10 col-lg-8">
+                        <section class="container">
+                            <h2 hidden>Discovery</h2>
+                            <p>
+                                Discovery was part of <abbr>NASA</abbr>'s Space Shuttle program which aimed to
+                                allow get humans into low Earth orbit (<abbr title="low Earth orbit">LEO</abbr>) at a
+                                lower cost than
+                                traditional rockets, and also allowing the reuse of the space
+                                shuttle itself.
+                            </p>
+                            <p>
+                                Discovery was the most used space shuttle out of the 5 that were
+                                manufactured. It was in service for <strong>39 missions over a span of
+                                    <time datetime="P9855D">27 years</time></strong>. Clocking up almost <time
+                                    datetime="P365D">a year</time> in space, this shuttle was
+                                fundamental to the construction of the <abbr
+                                    title="International Space Station">ISS</abbr> (International Space Station) and the
+                                launch of
+                                the Hubble Space Telescope.<sup>[<a aria-label="Reference 1"
+                                        href="#References">1</a>]</sup>
+                            </p>
+                        </section>
+
+                        <section class="container">
+                            <h2>Achievements</h2>
+                            <div class="container">
+                                <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 g-1 g-sm-2 g-xl-3">
+                                    <div class="col">
+                                        <div class="grid-inside p-3">
+                                            <h3>Hubble Space Telescope</h3>
+                                            <p>
+                                                The Discovery space shuttle was the shuttle that brought
+                                                the Hubble Space Telescope into space. Click here to see
+                                                an image taken by the telescope.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="grid-inside p-3">
+                                            <h3>ISS</h3>
+                                            <p>
+                                                Construction of the International Space Station was, in
+                                                part, executed by crews aboard the Discovery shuttle.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="grid-inside p-3">
+                                            <h3>365 days</h3>
+                                            <p>
+                                                Discovery spent a total of <time datetime="P365D">365 days</time> in Space!
+                                                <sup>[<a aria-label="Reference 2" href="#References">2</a>]</sup>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="grid-inside p-3">
+                                            <h3>Retirement</h3>
+                                            <p>
+                                                Discovery was the first space shuttle to be retired from <abbr>NASA</abbr>'s
+                                                fleet - not surprising considering it was the most used shuttle!
+                                                <sup>[<a aria-label="Reference 2" href="#References">2</a>]</sup>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="grid-inside p-3">
+                                            <h3>Miles travelled</h3>
+                                            <p>
+                                                Discovery travelled a total of 148,221,675 miles - the longest any
+                                                space shuttle has travelled ever!
+                                                <sup>[<a aria-label="Reference 2" href="#References">2</a>]</sup>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="grid-inside p-3">
+                                            <h3>Return to Flight missions</h3>
+                                            <p>
+                                                Discovery was the first shuttle to fly again following the
+                                                tradegies of <time datetime="1986">1986</time> Challenger space shuttle
+                                                explosion, and
+                                                the loss of the <time datetime="2003">2003</time> Colombia space shuttle.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="container">
+                            <h2>What happened?</h2>
+                            <p>
+                                The Space Shuttle progam was deemed too expensive to keep going. It's original
+                                goal was to reduce the cost of space access by using resuable parts, when in
+                                actual fact it was more expensive. A study in <time datetime="2017">2017</time> found
+                                that getting 1kg of
+                                cargo to the International Space Station was 3 times more expensive on the
+                                Space Shuttle program than it is with the cost of SpaceX's Dragon. <sup>[<a
+                                        aria-label="Reference 3" href="#References">3</a>]</sup>
+                            </p>
+                        </section>
+
+                        <section class="container text-break">
+                            <h3>References</h3>
+                            <div class="references-container">
+                                <ol class="references">
+                                    <li>Wall, M. <i>10 Cool Facts About NASA's Space Shuttle Discovery.</i> [Online].
+                                        2012. [Accessed 1 March 2022]. Available from: <a
+                                            href="https://www.space.com/15327-space-shuttle-discovery-10-cool-facts.html">https://www.space.com/15327-space-shuttle-discovery-10-cool-facts.html</a>
+                                    </li>
+                                    <li>National Aeronautics and Space Administration. <i>Space Shuttle Era Facts.</i>
+                                        [Online]. 2012. [Accessed 1 March 2022]. Available from: <a
+                                            href="https://www.nasa.gov/pdf/566250main_SHUTTLE%20ERA%20FACTS_040412.pdf">https://www.nasa.gov/pdf/566250main_SHUTTLE%20ERA%20FACTS_040412.pdf</a>
+                                    </li>
+                                    <li>Foust, J. <i>Review: The Space Shuttle Program: Technologies and
+                                            Accomplishments.</i> [Online]. 2017. [Accessed 2 March 2022]. Available
+                                        from: <a
+                                            href="https://www.thespacereview.com/article/3372/1">https://www.thespacereview.com/article/3372/1</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

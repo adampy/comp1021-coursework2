@@ -1,0 +1,14 @@
+/* ----- Flex-grid ----- */
+.grid-inside {
+    border-radius: 25px;
+    background-color: #0096E0;
+    height: 100%;
+}
+
+.grid-inside:hover {
+    background-color: #0075af;
+}
+
+.grid-inside > p {
+    font-size: 16px;
+}
